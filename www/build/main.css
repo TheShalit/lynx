@@ -27565,6 +27565,7 @@ ion-navbar.toolbar {
 ion-content {
   background: url(../images/background.png) !important;
 }
+<<<<<<< HEAD
 
 page-place .place-row {
   position: relative;
@@ -27589,3 +27590,20 @@ page-place h4.font-16 {
 page-place .visit-hours {
   height: 90px;
 }
+||||||| merged common ancestors
+=======
+
+page-place #percentage-col {
+  position: relative;
+}
+
+page-place .font-32 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+page-place .font-32 h2 {
+  font-size: 32px;
+}
+>>>>>>> fea46e7d0964e8a30c5cd0c1bb459ea85f7a0f20
