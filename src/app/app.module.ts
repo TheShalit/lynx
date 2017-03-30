@@ -7,6 +7,7 @@ import {HomePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
 import {NeedPlacePage} from '../pages/need-place/need-place';
 import {PlacesPage} from '../pages/places/places';
+import {PlacePage} from '../pages/place/place';
 import {PartnerFormPage} from '../pages/partner-form/partner-form';
 
 import {StatusBar} from '@ionic-native/status-bar';
@@ -17,9 +18,8 @@ import {SocialSharing} from '@ionic-native/social-sharing';
 import {AngularFireModule, AuthProviders, AuthMethods} from 'angularfire2';
 import {GooglePlus} from '@ionic-native/google-plus';
 import {WelcomePage} from "../pages/welcome/welcome";
-import {Ng2GoogleChartsModule} from 'ng2-google-charts';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import {NoiseSharePage} from "../pages/noise-share/noise-share";
-import {PlacePage} from "../pages/place/place";
 
 
 // AF2 Settings
@@ -48,15 +48,9 @@ const myFirebaseAuthConfig = {
     WelcomePage,
     NeedPlacePage,
     PlacesPage,
-<<<<<<< HEAD
     NoiseSharePage,
-    PartnerFormPage
-||||||| merged common ancestors
-    NoiseSharePage
-=======
-    NoiseSharePage,
+    PartnerFormPage,
     PlacePage
->>>>>>> 903eb8646cf23ef4bbed78607ab5b6f42ba76690
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -73,15 +67,9 @@ const myFirebaseAuthConfig = {
     WelcomePage,
     NeedPlacePage,
     PlacesPage,
-<<<<<<< HEAD
     NoiseSharePage,
-    PartnerFormPage
-||||||| merged common ancestors
-    NoiseSharePage
-=======
-    NoiseSharePage,
+    PartnerFormPage,
     PlacePage
->>>>>>> 903eb8646cf23ef4bbed78607ab5b6f42ba76690
   ],
   providers: [
     StatusBar,

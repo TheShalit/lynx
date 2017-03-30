@@ -10,7 +10,7 @@ import {PartnerFormPage} from '../pages/partner-form/partner-form';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = PartnerFormPage;
+  rootPage:any = WelcomePage;
 
   constructor(platform:Platform, statusBar:StatusBar, splashScreen:SplashScreen) {
     platform.ready().then(() => {
