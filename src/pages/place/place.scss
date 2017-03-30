@@ -1,5 +1,5 @@
 page-place {
-  #percentage-col{
+  .place-row{
     position: relative;
   }
   .font-32 {
@@ -9,5 +9,13 @@ page-place {
   }
   .font-32 h2 {
     font-size: 32px;
+  }
+  h4.font-16 {
+    position: relative;
+    top: 30%;
+    font-size: 16px;
+  }
+  .visit-hours {
+    height: 90px;
   }
 }
