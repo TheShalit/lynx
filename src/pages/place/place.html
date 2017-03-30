@@ -21,14 +21,27 @@
     </ion-card-header>
 
     <ion-card-content>
-      <div style="position:relative;height:150px">
-        <google-chart style="left: 50%;margin-left: -125px;position: absolute;"
-                      [data]="floor.data"></google-chart>
-      </div>
-      <button ion-button icon-left block style="margin-top:calc(100% - 20px)" (click)="share()">
-        <ion-icon name="share"></ion-icon>
-        Share
-      </button>
+      <ion-row>
+        <ion-col col-6>
+          <div>
+            <google-chart [data]="floor.data"></google-chart>
+          </div>
+        </ion-col>
+        <ion-col id="percentage-col" col-6>
+          <div class="font-32">
+            <h2>{{floor.lvl | number:'1.0-0'}}%</h2>
+          </div>
+        </ion-col>
+        <button ion-button icon-left block style="margin-top:calc(100% - 20px)" (click)="share()">
+          <ion-icon name="share"></ion-icon>
+          Share
+        </button>
+      </ion-row>
+      <ion-row>
+        <ion-avatar item-left>
+          <img src="resources/avatar.png">
+        </ion-avatar>
+      </ion-row>
     </ion-card-content>
 
   </ion-card>

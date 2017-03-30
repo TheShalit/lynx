@@ -222,8 +222,8 @@ export class HomePage {
 
   openPlace(num:any) {
     let floor = JSON.parse(JSON.stringify(this.floors[num - 1]));
-    floor.data.options.width = 250;
-    floor.data.options.height = 250;
+    floor.data.options.width = 150;
+    floor.data.options.height = 150;
     this.navCtrl.push(PlacePage, {floor: floor});
   }
 }
