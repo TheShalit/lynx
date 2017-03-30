@@ -5,5 +5,33 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="login()">Login with BGU account</button>
+  <ion-card style="text-align:center; ">
+
+    <ion-card-header>
+      <div>Welcome <b>Shalev Shalit</b></div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div style="position:relative;height:150px">
+        <google-chart style="left: 50%;margin-left: -75px;position: absolute;"
+                      [data]="gaugeChartOptions"></google-chart>
+      </div>
+      <ion-list>
+        <ion-item *ngFor="let floor of floors">
+          <ion-thumbnail item-left>
+            <img [src]="floor.img">
+          </ion-thumbnail>
+          <h2>Floor {{floor.num}}</h2>
+          <p>{{floor.name}}</p>
+          <div item-right>
+            <google-chart [data]="floor.data"></google-chart>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+  <div style="margin-top:40px">
+    <button ion-button block (click)="noiseShare()">Share Noise</button>
+  </div>
 </ion-content>

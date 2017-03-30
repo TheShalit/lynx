@@ -5,6 +5,8 @@ import {AboutPage} from '../pages/about/about';
 import {ContactPage} from '../pages/contact/contact';
 import {HomePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
+import {NeedPlacePage} from '../pages/need-place/need-place';
+import {PlacesPage} from '../pages/places/places';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -12,15 +14,18 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 // Import the AF2 Module
 import {AngularFireModule, AuthProviders, AuthMethods} from 'angularfire2';
 import {GooglePlus} from '@ionic-native/google-plus';
+import {WelcomePage} from "../pages/welcome/welcome";
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import {NoiseSharePage} from "../pages/noise-share/noise-share";
 
 
 // AF2 Settings
 export const firebaseConfig = {
-  apiKey: "USE YOURS HERE!!!!",
-  authDomain: "",
-  databaseURL: "",
-  storageBucket: "",
-  messagingSenderId: ""
+  apiKey: "AIzaSyAI1BqZwuNOKkC1Rl7CldY7U3um_wRStwc",
+  authDomain: "lynx-163108.firebaseapp.com",
+  databaseURL: "https://lynx-163108.firebaseio.com",
+  storageBucket: "lynx-163108.appspot.com",
+  messagingSenderId: "595907167294"
 };
 
 const myFirebaseAuthConfig = {
@@ -36,11 +41,16 @@ const myFirebaseAuthConfig = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    WelcomePage,
+    NeedPlacePage,
+    PlacesPage,
+    NoiseSharePage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
+    Ng2GoogleChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,7 +58,11 @@ const myFirebaseAuthConfig = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    WelcomePage,
+    NeedPlacePage,
+    PlacesPage,
+    NoiseSharePage
   ],
   providers: [
     StatusBar,
