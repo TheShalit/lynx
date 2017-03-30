@@ -19,7 +19,7 @@ import {DBMeter} from '@ionic-native/db-meter';
 })
 export class NoiseSharePage {
   public dbmeter:FirebaseObjectObservable<any>;
-  public floor = 'floor 1';
+  public floor = 'floor1';
 
   constructor(public navCtrl:NavController, public af:AngularFire, private googlePlus:GooglePlus, private dbMeter:DBMeter) {
     let me = this;

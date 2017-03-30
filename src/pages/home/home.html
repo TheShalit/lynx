@@ -1,13 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Lynx</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="noiseShare()">
+        <ion-icon name="microphone"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-card style="text-align:center; ">
 
-    <ion-card-header>
+    <ion-card-header style="padding:4px;">
       <div>Welcome <b>Shalev Shalit</b></div>
     </ion-card-header>
 
@@ -16,22 +21,17 @@
         <google-chart style="left: 50%;margin-left: -75px;position: absolute;"
                       [data]="gaugeChartOptions"></google-chart>
       </div>
-      <ion-list>
-        <ion-item *ngFor="let floor of floors">
-          <ion-thumbnail item-left>
-            <img [src]="floor.img">
-          </ion-thumbnail>
-          <h2>Floor {{floor.num}}</h2>
-          <p>{{floor.name}}</p>
-          <div item-right>
-            <google-chart [data]="floor.data"></google-chart>
-          </div>
-        </ion-item>
-      </ion-list>
+      <button ion-item *ngFor="let floor of floors" (click)="openPlace(floor.num)">
+        <ion-avatar item-left>
+          <img [src]="floor.img">
+        </ion-avatar>
+        Floor {{floor.num}}
+        <div item-right>
+          {{floor.lvl | number:'1.2-2'}}%
+        </div>
+      </button>
     </ion-card-content>
 
   </ion-card>
-  <div style="margin-top:40px">
-    <button ion-button block (click)="noiseShare()">Share Noise</button>
-  </div>
+  <button ion-button block>Find a Partner</button>
 </ion-content>

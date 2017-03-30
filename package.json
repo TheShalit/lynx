@@ -23,6 +23,7 @@
     "@ionic-native/db-meter": "^3.4.3",
     "@ionic-native/firebase": "^3.4.3",
     "@ionic-native/google-plus": "^3.4.3",
+    "@ionic-native/social-sharing": "^3.4.3",
     "@ionic-native/splash-screen": "3.1.0",
     "@ionic-native/status-bar": "3.1.0",
     "@ionic/storage": "2.0.0",
