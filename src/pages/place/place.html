@@ -42,9 +42,9 @@
           </h4>
         </ion-col>
       </ion-row>
-      <ion-row class="visit-hours" *ngIf="!lookingForPartner">
+      <ion-row *ngIf="!lookingForPartner">
         <h3>Visit Hours</h3>
-        <img src="images/visit-hours.png">
+        <img class="visit-hours" src="images/visit-hours.png">
       </ion-row>
       <div><br></div>
       <button *ngIf="!lookingForPartner" ion-button icon-left block (click)="share()">
