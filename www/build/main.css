@@ -27565,3 +27565,17 @@ ion-navbar.toolbar {
 ion-content {
   background: url(../images/background.png) !important;
 }
+
+page-place #percentage-col {
+  position: relative;
+}
+
+page-place .font-32 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+page-place .font-32 h2 {
+  font-size: 32px;
+}

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
-import {NavController} from 'ionic-angular';
+import {NavController, ActionSheetController} from 'ionic-angular';
 import {AngularFire} from 'angularfire2';
 import {DBMeter} from '@ionic-native/db-meter';
 import {NoiseSharePage} from "../noise-share/noise-share";
@@ -173,7 +173,7 @@ export class HomePage {
     }
   ];
 
-  constructor(public navCtrl:NavController, public af:AngularFire, private dbMeter:DBMeter) {
+  constructor(public navCtrl:NavController, public af:AngularFire, public actionSheetCtrl:ActionSheetController) {
     let me = this;
     af.database.object('/meters')
       .subscribe(function (item:any) {
@@ -221,8 +221,36 @@ export class HomePage {
     this.navCtrl.push(NoiseSharePage);
   }
 
-  openForm(){
-    this.navCtrl.push(PartnerFormPage);
+  openForm() {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Find a Partner',
+      buttons: [
+        {
+          text: 'Already sitting?',
+          icon: 'flag',
+          handler: () => {
+            this.navCtrl.push(PartnerFormPage);
+          }
+        },
+        {
+          text: 'Looking for a place?',
+          icon:'ios-people',
+          handler: () => {
+            this.navCtrl.push(PartnerFormPage);
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          icon:'close',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+
+    actionSheet.present();
   }
 
   openPlace(num:any) {
