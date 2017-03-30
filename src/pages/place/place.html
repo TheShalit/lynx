@@ -15,33 +15,43 @@
 
 <ion-content padding>
   <ion-card style="height: calc(100% - 20px);">
-
-    <ion-card-header>
-      {{floor.name}}
-    </ion-card-header>
-
     <ion-card-content>
-      <ion-row>
+      <h2><strong>{{floor.name}}</strong></h2>
+      <ion-row class="place-row">
         <ion-col col-6>
           <div>
             <google-chart [data]="floor.data"></google-chart>
           </div>
         </ion-col>
-        <ion-col id="percentage-col" col-6>
+        <ion-col col-6>
           <div class="font-32">
             <h2>{{floor.lvl | number:'1.0-0'}}%</h2>
           </div>
         </ion-col>
-        <button ion-button icon-left block style="margin-top:calc(100% - 20px)" (click)="share()">
-          <ion-icon name="share"></ion-icon>
-          Share
-        </button>
       </ion-row>
-      <ion-row>
-        <ion-avatar item-left>
-          <img src="resources/avatar.png">
-        </ion-avatar>
+      <div><br><br></div>
+      <ion-row class="place-row" *ngIf="lookingForPartner">
+        <ion-col col-3>
+          <ion-avatar item-left>
+            <img src="images/avatar.png">
+          </ion-avatar>
+        </ion-col>
+        <ion-col col-9>
+          <h4 class="font-16">
+            <strong>Edan Chetrit</strong> is looking for a partner
+          </h4>
+        </ion-col>
       </ion-row>
+      <ion-row *ngIf="!lookingForPartner">
+        <h3>Visit Hours</h3>
+        <img class="visit-hours" src="images/visit-hours.png">
+      </ion-row>
+      <div><br></div>
+      <button *ngIf="!lookingForPartner" ion-button icon-left block (click)="share()">
+        <ion-icon name="share"></ion-icon>
+        Share
+      </button>
+      <button *ngIf="lookingForPartner" ion-button color="secondary" block round>Great, I'll be there!</button>
     </ion-card-content>
 
   </ion-card>
