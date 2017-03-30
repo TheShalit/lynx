@@ -4,6 +4,7 @@ import {NavController} from 'ionic-angular';
 import {AngularFire} from 'angularfire2';
 import {DBMeter} from '@ionic-native/db-meter';
 import {NoiseSharePage} from "../noise-share/noise-share";
+import {PlacePage} from "../place/place";
 
 @Component({
   selector: 'page-home',
@@ -39,6 +40,7 @@ export class HomePage {
       img: 'images/001-earth-globe.png',
       num: 1,
       name: 'Engineering Sciences and Natural Sciences',
+      lvl: 50,
       data: {
         chartType: 'Gauge',
         dataTable: [
@@ -47,7 +49,7 @@ export class HomePage {
         ],
         options: {
           animation: {easing: 'out'},
-          width: 56, height: 56,
+          width: 40, height: 40,
           greenFrom: 0, greenTo: 30,
           redFrom: 70, redTo: 100,
           yellowFrom: 30, yellowTo: 70,
@@ -64,7 +66,8 @@ export class HomePage {
     {
       img: 'images/002-college.png',
       num: 2,
-      name: 'General Reference and Question',
+      name: 'General Reference and Questions',
+      lvl: 50,
       data: {
         chartType: 'Gauge',
         dataTable: [
@@ -73,7 +76,7 @@ export class HomePage {
         ],
         options: {
           animation: {easing: 'out'},
-          width: 56, height: 56,
+          width: 40, height: 40,
           greenFrom: 0, greenTo: 30,
           redFrom: 70, redTo: 100,
           yellowFrom: 30, yellowTo: 70,
@@ -91,6 +94,7 @@ export class HomePage {
       img: 'images/003-bookshelf.png',
       num: 3,
       name: 'Reading Room for Humanities',
+      lvl: 50,
       data: {
         chartType: 'Gauge',
         dataTable: [
@@ -99,7 +103,7 @@ export class HomePage {
         ],
         options: {
           animation: {easing: 'out'},
-          width: 56, height: 56,
+          width: 40, height: 40,
           greenFrom: 0, greenTo: 30,
           redFrom: 70, redTo: 100,
           yellowFrom: 30, yellowTo: 70,
@@ -117,6 +121,7 @@ export class HomePage {
       img: 'images/004-books.png',
       num: 4,
       name: 'Social Sciences and Management',
+      lvl: 50,
       data: {
         chartType: 'Gauge',
         dataTable: [
@@ -125,7 +130,7 @@ export class HomePage {
         ],
         options: {
           animation: {easing: 'out'},
-          width: 56, height: 56,
+          width: 40, height: 40,
           greenFrom: 0, greenTo: 30,
           redFrom: 70, redTo: 100,
           yellowFrom: 30, yellowTo: 70,
@@ -143,6 +148,7 @@ export class HomePage {
       img: 'images/005-science.png',
       num: 5,
       name: 'Judaism and Israel',
+      lvl: 50,
       data: {
         chartType: 'Gauge',
         dataTable: [
@@ -151,7 +157,7 @@ export class HomePage {
         ],
         options: {
           animation: {easing: 'out'},
-          width: 56, height: 56,
+          width: 40, height: 40,
           greenFrom: 0, greenTo: 30,
           redFrom: 70, redTo: 100,
           yellowFrom: 30, yellowTo: 70,
@@ -181,7 +187,7 @@ export class HomePage {
               ['Label', 'Floor ' + i],
               ['Floor ' + i, val]
             ];
-
+            opts['lvl'] = val;
             return Object.assign({}, opts);
           });
 
@@ -212,6 +218,12 @@ export class HomePage {
 
   noiseShare() {
     this.navCtrl.push(NoiseSharePage);
+  }
 
+  openPlace(num:any) {
+    let floor = JSON.parse(JSON.stringify(this.floors[num - 1]));
+    floor.data.options.width = 250;
+    floor.data.options.height = 250;
+    this.navCtrl.push(PlacePage, {floor: floor});
   }
 }

@@ -11,13 +11,15 @@ import {PartnerFormPage} from '../pages/partner-form/partner-form';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
+import {SocialSharing} from '@ionic-native/social-sharing';
 
 // Import the AF2 Module
 import {AngularFireModule, AuthProviders, AuthMethods} from 'angularfire2';
 import {GooglePlus} from '@ionic-native/google-plus';
 import {WelcomePage} from "../pages/welcome/welcome";
-import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import {Ng2GoogleChartsModule} from 'ng2-google-charts';
 import {NoiseSharePage} from "../pages/noise-share/noise-share";
+import {PlacePage} from "../pages/place/place";
 
 
 // AF2 Settings
@@ -46,8 +48,15 @@ const myFirebaseAuthConfig = {
     WelcomePage,
     NeedPlacePage,
     PlacesPage,
+<<<<<<< HEAD
     NoiseSharePage,
     PartnerFormPage
+||||||| merged common ancestors
+    NoiseSharePage
+=======
+    NoiseSharePage,
+    PlacePage
+>>>>>>> 903eb8646cf23ef4bbed78607ab5b6f42ba76690
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -64,13 +73,21 @@ const myFirebaseAuthConfig = {
     WelcomePage,
     NeedPlacePage,
     PlacesPage,
+<<<<<<< HEAD
     NoiseSharePage,
     PartnerFormPage
+||||||| merged common ancestors
+    NoiseSharePage
+=======
+    NoiseSharePage,
+    PlacePage
+>>>>>>> 903eb8646cf23ef4bbed78607ab5b6f42ba76690
   ],
   providers: [
     StatusBar,
     SplashScreen,
     GooglePlus,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
