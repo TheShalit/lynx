@@ -18,18 +18,20 @@ export class HomePage {
     chartType: 'Gauge',
     dataTable: [
       ['Label', 'Library'],
-      ['Library', 2.5]
+      ['Library', 50]
     ],
     options: {
       animation: {easing: 'out'},
       width: 150, height: 150,
-      greenFrom: 0, greenTo: 2,
-      redFrom: 4, redTo: 5,
+      greenFrom: 0, greenTo: 30,
+      redFrom: 70, redTo: 100,
+      yellowFrom: 30, yellowTo: 70,
       minorTicks: 5,
-      min: 0, max: 5,
-      majorTicks: ['0', '1', '2', '3', '4', '5'],
+      min: 0, max: 100,
+      majorTicks: ['0', '20', '40', '60', '80', '100'],
       greenColor: '#d0e9c6',
-      redColor: '#e9d0c6'
+      redColor: '#e9d0c6',
+      yellowColor: '#ffcf94'
     }
   };
   public floors:any = [
@@ -41,18 +43,20 @@ export class HomePage {
         chartType: 'Gauge',
         dataTable: [
           ['Label', 'Floor 1'],
-          ['Floor 1', 2.5]
+          ['Floor 1', 50]
         ],
         options: {
           animation: {easing: 'out'},
           width: 56, height: 56,
-          greenFrom: 0, greenTo: 2,
-          redFrom: 4, redTo: 5,
+          greenFrom: 0, greenTo: 30,
+          redFrom: 70, redTo: 100,
+          yellowFrom: 30, yellowTo: 70,
           minorTicks: 5,
-          min: 0, max: 5,
-          majorTicks: ['0', '1', '2', '3', '4', '5'],
+          min: 0, max: 100,
+          majorTicks: ['0', '20', '40', '60', '80', '100'],
           greenColor: '#d0e9c6',
-          redColor: '#e9d0c6'
+          redColor: '#e9d0c6',
+          yellowColor: '#ffcf94'
         }
       }
     },
@@ -65,18 +69,20 @@ export class HomePage {
         chartType: 'Gauge',
         dataTable: [
           ['Label', 'Floor 2'],
-          ['Floor 2', 2.5]
+          ['Floor 2', 50]
         ],
         options: {
           animation: {easing: 'out'},
           width: 56, height: 56,
-          greenFrom: 0, greenTo: 2,
-          redFrom: 4, redTo: 5,
+          greenFrom: 0, greenTo: 30,
+          redFrom: 70, redTo: 100,
+          yellowFrom: 30, yellowTo: 70,
           minorTicks: 5,
-          min: 0, max: 5,
-          majorTicks: ['0', '1', '2', '3', '4', '5'],
+          min: 0, max: 100,
+          majorTicks: ['0', '20', '40', '60', '80', '100'],
           greenColor: '#d0e9c6',
-          redColor: '#e9d0c6'
+          redColor: '#e9d0c6',
+          yellowColor: '#ffcf94'
         }
       }
     },
@@ -89,18 +95,20 @@ export class HomePage {
         chartType: 'Gauge',
         dataTable: [
           ['Label', 'Floor 3'],
-          ['Floor 3', 2.5]
+          ['Floor 3', 50]
         ],
         options: {
           animation: {easing: 'out'},
           width: 56, height: 56,
-          greenFrom: 0, greenTo: 2,
-          redFrom: 4, redTo: 5,
+          greenFrom: 0, greenTo: 30,
+          redFrom: 70, redTo: 100,
+          yellowFrom: 30, yellowTo: 70,
           minorTicks: 5,
-          min: 0, max: 5,
-          majorTicks: ['0', '1', '2', '3', '4', '5'],
+          min: 0, max: 100,
+          majorTicks: ['0', '20', '40', '60', '80', '100'],
           greenColor: '#d0e9c6',
-          redColor: '#e9d0c6'
+          redColor: '#e9d0c6',
+          yellowColor: '#ffcf94'
         }
       }
     },
@@ -113,18 +121,20 @@ export class HomePage {
         chartType: 'Gauge',
         dataTable: [
           ['Label', 'Floor 4'],
-          ['Floor 4', 2.5]
+          ['Floor 4', 50]
         ],
         options: {
           animation: {easing: 'out'},
           width: 56, height: 56,
-          greenFrom: 0, greenTo: 2,
-          redFrom: 4, redTo: 5,
+          greenFrom: 0, greenTo: 30,
+          redFrom: 70, redTo: 100,
+          yellowFrom: 30, yellowTo: 70,
           minorTicks: 5,
-          min: 0, max: 5,
-          majorTicks: ['0', '1', '2', '3', '4', '5'],
+          min: 0, max: 100,
+          majorTicks: ['0', '20', '40', '60', '80', '100'],
           greenColor: '#d0e9c6',
-          redColor: '#e9d0c6'
+          redColor: '#e9d0c6',
+          yellowColor: '#ffcf94'
         }
       }
     },
@@ -137,18 +147,20 @@ export class HomePage {
         chartType: 'Gauge',
         dataTable: [
           ['Label', 'Floor 5'],
-          ['Floor 5', 2.5]
+          ['Floor 5', 50]
         ],
         options: {
           animation: {easing: 'out'},
           width: 56, height: 56,
-          greenFrom: 0, greenTo: 2,
-          redFrom: 4, redTo: 5,
+          greenFrom: 0, greenTo: 30,
+          redFrom: 70, redTo: 100,
+          yellowFrom: 30, yellowTo: 70,
           minorTicks: 5,
-          min: 0, max: 5,
-          majorTicks: ['0', '1', '2', '3', '4', '5'],
+          min: 0, max: 100,
+          majorTicks: ['0', '20', '40', '60', '80', '100'],
           greenColor: '#d0e9c6',
-          redColor: '#e9d0c6'
+          redColor: '#e9d0c6',
+          yellowColor: '#ffcf94'
         }
       }
     }
@@ -162,7 +174,7 @@ export class HomePage {
           let sum = 0;
           me.floors = [1, 2, 3, 4, 5].map(function (i) {
             let opts = me.floors[i - 1];
-            let val = (+item['floor' + i] || 2.5) / 10 - 4;
+            let val = ((+item['floor' + i] || 50) / 40 - 1.25) * 70 + 30;
             sum += val;
 
             opts['data']['dataTable'] = [
@@ -182,13 +194,15 @@ export class HomePage {
             options: {
               animation: {easing: 'out'},
               width: 150, height: 150,
-              greenFrom: 0, greenTo: 2,
-              redFrom: 4, redTo: 5,
+              greenFrom: 0, greenTo: 30,
+              redFrom: 70, redTo: 100,
+              yellowFrom: 30, yellowTo: 70,
               minorTicks: 5,
-              min: 0, max: 5,
-              majorTicks: ['0', '1', '2', '3', '4', '5'],
+              min: 0, max: 100,
+              majorTicks: ['0', '20', '40', '60', '80', '100'],
               greenColor: '#d0e9c6',
-              redColor: '#e9d0c6'
+              redColor: '#e9d0c6',
+              yellowColor: '#ffcf94'
             }
           };
 
