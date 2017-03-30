@@ -38,7 +38,7 @@ export class HomePage {
   };
   public floors:any = [
     {
-      img: 'images/001-earth-globe.png',
+      img: 'images/005-science.png',
       num: 1,
       name: 'Engineering Sciences and Natural Sciences',
       lvl: 50,
@@ -65,7 +65,7 @@ export class HomePage {
     },
 
     {
-      img: 'images/002-college.png',
+      img: 'images/003-bookshelf.png',
       num: 2,
       name: 'General Reference and Questions',
       lvl: 50,
@@ -92,7 +92,7 @@ export class HomePage {
     },
 
     {
-      img: 'images/003-bookshelf.png',
+      img: 'images/002-college.png',
       num: 3,
       name: 'Reading Room for Humanities',
       lvl: 50,
@@ -146,7 +146,7 @@ export class HomePage {
     },
 
     {
-      img: 'images/005-science.png',
+      img: 'images/001-earth-globe.png',
       num: 5,
       name: 'Judaism and Israel',
       lvl: 50,
@@ -220,7 +220,7 @@ export class HomePage {
   noiseShare() {
     this.navCtrl.push(NoiseSharePage);
   }
-  
+
   openForm(){
     this.navCtrl.push(PartnerFormPage);
   }
