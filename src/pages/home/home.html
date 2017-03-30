@@ -27,11 +27,13 @@
         </ion-avatar>
         Floor {{floor.num}}
         <div item-right>
+          <img [src]="'images/sound-' + (floor.lvl > 70 ? 'red' : 'green') + '.png'"
+               style="height:24px;width: 24px;float: left;vertical-align: bottom;margin-right:20px;"/>
           {{floor.lvl | number:'1.2-2'}}%
         </div>
       </button>
     </ion-card-content>
 
   </ion-card>
-  <button ion-button block>Find a Partner</button>
+  <button ion-button block (click)="openForm()">Find a Partner</button>
 </ion-content>
