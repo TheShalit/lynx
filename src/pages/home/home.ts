@@ -5,6 +5,7 @@ import {AngularFire} from 'angularfire2';
 import {DBMeter} from '@ionic-native/db-meter';
 import {NoiseSharePage} from "../noise-share/noise-share";
 import {PlacePage} from "../place/place";
+import {PartnerFormPage} from "../partner-form/partner-form";
 
 @Component({
   selector: 'page-home',
@@ -218,6 +219,10 @@ export class HomePage {
 
   noiseShare() {
     this.navCtrl.push(NoiseSharePage);
+  }
+  
+  openForm(){
+    this.navCtrl.push(PartnerFormPage);
   }
 
   openPlace(num:any) {
