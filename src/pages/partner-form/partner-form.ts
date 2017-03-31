@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
-import {WillBeNotifyPage} from "../will-be-notify/will-be-notify";
+import {NavController, NavParams, AlertController} from 'ionic-angular';
 import {PartnersListPage} from "../partners-list/partners-list";
+import {HomePage} from "../home/home";
 
 
 /*
@@ -17,7 +17,7 @@ import {PartnersListPage} from "../partners-list/partners-list";
 export class PartnerFormPage {
   public lookingForPartner:any;
 
-  constructor(public navCtrl:NavController, public navParams:NavParams) {
+  constructor(public navCtrl:NavController, public navParams:NavParams, private alertCtrl:AlertController) {
     this.lookingForPartner = navParams.get('lookingForPartner');
   }
 
@@ -25,11 +25,17 @@ export class PartnerFormPage {
     console.log('ionViewDidLoad PartnerFormPage');
   }
 
-  send(){
+  send() {
     if (this.lookingForPartner) {
       this.navCtrl.push(PartnersListPage);
     } else {
-      this.navCtrl.push(WillBeNotifyPage);
+      let alert = this.alertCtrl.create({
+        title: 'Waiting for a partner',
+        subTitle: 'As soon as we will find a match, you will get a notification.<br/>Good Luck!',
+        buttons: ['Ok']
+      });
+      alert.present();
+      this.navCtrl.setRoot(HomePage);
     }
   }
 }
