@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
-import {PlacePage} from "../place/place";
 import {WillBeNotifyPage} from "../will-be-notify/will-be-notify";
 import {PartnersListPage} from "../partners-list/partners-list";
 
