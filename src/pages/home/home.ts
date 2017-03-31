@@ -229,14 +229,14 @@ export class HomePage {
           text: 'Already sitting?',
           icon: 'flag',
           handler: () => {
-            this.navCtrl.push(PartnerFormPage);
+            this.navCtrl.push(PartnerFormPage, {lookingForPartner: false});
           }
         },
         {
           text: 'Looking for a place?',
           icon:'ios-people',
           handler: () => {
-            this.navCtrl.push(PartnerFormPage);
+            this.navCtrl.push(PartnerFormPage, {lookingForPartner: true});
           }
         },
         {

@@ -16,48 +16,47 @@
 <ion-content padding>
 
   <ion-list>
-  <ion-card *ngIf="userIsSitting">
-    <ion-item>
-      <ion-label>Building</ion-label>
-      <ion-select [(ngModel)]="building">
-        <ion-option value="library">Library</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item *ngIf="building">
-      <ion-label>Floor</ion-label>
-      <ion-select floating [(ngModel)]="floor">
-        <ion-option value="1">First Floor</ion-option>
-        <ion-option value="2">Second Floor</ion-option>
-        <ion-option value="3">Third Floor</ion-option>
-        <ion-option value="4">Fourth Floor</ion-option>
-        <ion-option value="5">Fifth Floor</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-card>
-  <ion-card>
-    <ion-item>
-      <ion-label>Your Degree</ion-label>
-      <ion-select floating [(ngModel)]="degree">
-        <ion-option value="1">Psychology</ion-option>
-        <ion-option value="2">Business Management</ion-option>
-        <ion-option value="3">Computer Science</ion-option>
-        <ion-option value="4">Arts</ion-option>
-        <ion-option value="5">Industrial Engineering</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-card>
-  <ion-card>
-    <ion-item>
-      <ion-label>Course You Currently Study</ion-label>
-      <ion-select floating [(ngModel)]="course">
-        <ion-option value="1">Economics</ion-option>
-        <ion-option value="2">Cognitive Psychology</ion-option>
-        <ion-option value="3">Social Psychology</ion-option>
-        <ion-option value="4">Child Development</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-card>
-</ion-list>
-      <button ion-button color="secondary" block round>Send</button>
-
+    <ion-card *ngIf="userIsSitting">
+      <ion-item>
+        <ion-label>Building</ion-label>
+        <ion-select [(ngModel)]="building">
+          <ion-option value="library">Library</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngIf="building">
+        <ion-label>Floor</ion-label>
+        <ion-select floating [(ngModel)]="floor">
+          <ion-option value="1">First Floor</ion-option>
+          <ion-option value="2">Second Floor</ion-option>
+          <ion-option value="3">Third Floor</ion-option>
+          <ion-option value="4">Fourth Floor</ion-option>
+          <ion-option value="5">Fifth Floor</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-label>Your Degree</ion-label>
+        <ion-select floating [(ngModel)]="degree">
+          <ion-option value="1">Psychology</ion-option>
+          <ion-option value="2">Business Management</ion-option>
+          <ion-option value="3">Computer Science</ion-option>
+          <ion-option value="4">Arts</ion-option>
+          <ion-option value="5">Industrial Engineering</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-label>Course You Currently Study</ion-label>
+        <ion-select floating [(ngModel)]="course">
+          <ion-option value="1">Economics</ion-option>
+          <ion-option value="2">Cognitive Psychology</ion-option>
+          <ion-option value="3">Social Psychology</ion-option>
+          <ion-option value="4">Child Development</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+  <button ion-button color="secondary" block round (click)="send()">Send</button>
 </ion-content>
