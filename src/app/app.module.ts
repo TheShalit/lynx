@@ -10,6 +10,7 @@ import {PlacesPage} from '../pages/places/places';
 import {PlacePage} from '../pages/place/place';
 import {PartnerFormPage} from '../pages/partner-form/partner-form';
 import {PartnersListPage} from '../pages/partners-list/partners-list';
+import {WillBeNotifyPage} from '../pages/will-be-notify/will-be-notify';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -52,7 +53,8 @@ const myFirebaseAuthConfig = {
     NoiseSharePage,
     PartnerFormPage,
     PlacePage,
-    PartnersListPage
+    PartnersListPage,
+    WillBeNotifyPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -72,7 +74,8 @@ const myFirebaseAuthConfig = {
     NoiseSharePage,
     PartnerFormPage,
     PlacePage,
-    PartnersListPage
+    PartnersListPage,
+    WillBeNotifyPage
   ],
   providers: [
     StatusBar,

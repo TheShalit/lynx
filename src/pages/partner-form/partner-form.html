@@ -16,7 +16,7 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-card *ngIf="userIsSitting">
+    <ion-card *ngIf="!lookingForPartner">
       <ion-item>
         <ion-label>Building</ion-label>
         <ion-select [(ngModel)]="building">

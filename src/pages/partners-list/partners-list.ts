@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { PlacePage } from '../place/place';
 
 /*
   Generated class for the PartnersList page.
@@ -17,6 +18,10 @@ export class PartnersListPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PartnersListPage');
+  }
+
+  send(){
+    this.navCtrl.push(PlacePage);
   }
 
 }

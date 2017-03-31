@@ -1,6 +1,9 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {PlacePage} from "../place/place";
+import {WillBeNotifyPage} from "../will-be-notify/will-be-notify";
+import {PartnersListPage} from "../partners-list/partners-list";
+
 
 /*
  Generated class for the PartnerForm page.
@@ -24,6 +27,10 @@ export class PartnerFormPage {
   }
 
   send(){
-    this.navCtrl.push(PlacePage, {lookingForPartner: this.lookingForPartner});
+    if (this.lookingForPartner) {
+      this.navCtrl.push(PartnersListPage);
+    } else {
+      this.navCtrl.push(WillBeNotifyPage);
+    }
   }
 }
